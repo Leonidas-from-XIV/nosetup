@@ -1,0 +1,15 @@
+opam-version: "1.2"
+maintainer: "Marek Kubica <marek@xivilization.net>"
+author: "Marek Kubica <marek@xivilization.net>"
+homepage: "https://github.com/Leonidas-from-XIV/nosetup"
+bug-reports: "https://github.com/Leonidas-from-XIV/nosetup/issues"
+dev-repo: "https://github.com/Leonidas-from-XIV/nosetup.git"
+depends: [
+  "ocamlfind"
+  "ocamlbuild" {build}
+  "topkg" {build}
+  "angstrom"
+  "containers" ]
+build: [
+  "ocaml" "pkg/pkg.ml" "build"
+          "--pinned" "%{pinned}%" ]
