@@ -11,9 +11,18 @@ You can call it `no-setup` or `nose-tup`. In the latter case you can use
 
 Be sure to have installed:
 
+  * `ocamlbuild` (for building)
+  * `topkg` (also for building)
   * `findlib`
   * `angstrom`
-  * `ocamlbuild` (for duh, building)
+  * `containers`
+
+The package uses `topkg` to run the build infrastructure, therefore you can
+build it with a short incantation:
+
+```sh
+ocaml pkg/pkg.ml -build
+```
 
 ## Usage
 
@@ -22,6 +31,9 @@ You need to add a bit to your `.ocamlinit`:
 ```ocaml
 #require "nosetup";;
 ```
+
+Now every `utop` you'll start will have all the `findlib` packages from your
+`.merlin` file preloaded. No need to do anything more.
 
 ## License
 
