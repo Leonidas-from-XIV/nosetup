@@ -3,12 +3,13 @@ open Containers
 
 let rec locate_till_root path filename =
   let candidate = Filename.concat path filename in
-  match Unix.access candidate [Unix.R_OK] with
+  let open Unix in
+  match access candidate [R_OK] with
   | _ -> Some candidate
-  | exception Unix.Unix_error _ ->
+  | exception Unix_error _ ->
     let parent = Filename.concat path Filename.parent_dir_name in
-    match (Unix.stat path, Unix.stat parent) with
-    | ({ Unix.st_ino = this_ino}, { Unix.st_ino = parent_ino }) when this_ino = parent_ino ->
+    match (stat path, stat parent) with
+    | ({ st_ino = this_ino}, { st_ino = parent_ino }) when this_ino = parent_ino ->
         None
     | _ -> locate_till_root parent filename
 
