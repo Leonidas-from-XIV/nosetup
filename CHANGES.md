@@ -1,3 +1,5 @@
+* Restrict OCaml versions to support the syntax we use
+
 v0.8.1 2016-12-29
 -----------------
 
