@@ -5,7 +5,6 @@ open Topkg
 
 let () =
   Pkg.describe
-    ~change_logs:[]
     ~opams:[Pkg.opam_file ~lint_deps_excluding:(Some ["findlib"]) "opam"]
     "nosetup" @@ fun c ->
   Ok [ Pkg.lib "src/nosetup.cma" ]
