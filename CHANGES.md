@@ -1,4 +1,5 @@
 * Restrict OCaml versions to support the syntax we use
+* Do not export all the private cruft from the Merlin parser
 
 v0.8.1 2016-12-29
 -----------------
