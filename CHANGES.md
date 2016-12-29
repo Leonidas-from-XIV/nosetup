@@ -1,3 +1,9 @@
+v0.8.1 2016-12-29
+-----------------
+
+* Add some more data and rewrite `README.md` for `topkg` to happily generate
+  `opam` releases.
+
 v0.8.0 2016-12-29
 -----------------
 
