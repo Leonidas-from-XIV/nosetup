@@ -29,7 +29,7 @@ The package uses `topkg` to run the build infrastructure, therefore you can
 build it with a short incantation:
 
 ```sh
-ocaml pkg/pkg.ml -build
+ocaml pkg/pkg.ml build
 ```
 
 ## Usage
