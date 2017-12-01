@@ -9,9 +9,9 @@ depends: [
   "ocamlfind"
   "ocamlbuild" {build}
   "topkg" {build}
-  "angstrom"
+  "angstrom" {>= "0.7.0"}
   "containers" ]
 build: [
   "ocaml" "pkg/pkg.ml" "build"
           "--pinned" "%{pinned}%" ]
-available: [ ocaml-version >= "4.02.0" ]
+available: [ ocaml-version >= "4.03.0" ]

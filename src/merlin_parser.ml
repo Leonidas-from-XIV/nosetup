@@ -11,7 +11,7 @@ let any_line = pkg_line <|> skip_line
 let parser = sep_by (char '\n') any_line
 
 let parse content =
-  match parse_only parser (`String content) with
+  match parse_string parser content with
   | Result.Error msg ->
     []
   | Result.Ok lines ->
