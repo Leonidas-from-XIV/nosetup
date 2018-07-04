@@ -12,7 +12,7 @@ let parser = sep_by (char '\n') any_line
 
 let parse content =
   match parse_string parser content with
-  | Result.Error msg ->
+  | Error _ ->
     []
-  | Result.Ok lines ->
+  | Ok lines ->
     List.flatten lines
