@@ -1,7 +1,7 @@
 .PHONY: all
 all:
-	jbuilder build --dev
+	dune build
 
 .PHONY: clean
 clean:
-	jbuilder clean
+	dune clean

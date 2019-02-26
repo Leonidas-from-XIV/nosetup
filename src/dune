@@ -1,0 +1,4 @@
+(library
+ (name nosetup)
+ (public_name nosetup)
+ (libraries containers angstrom findlib.top))
