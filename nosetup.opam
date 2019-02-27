@@ -7,11 +7,9 @@ bug-reports: "https://github.com/Leonidas-from-XIV/nosetup/issues"
 dev-repo: "https://github.com/Leonidas-from-XIV/nosetup.git"
 depends: [
   "ocamlfind"
-  "ocamlbuild" {build}
-  "topkg" {build}
+  "dune" {build & >= "1.0"}
   "angstrom" {>= "0.7.0"}
-  "containers" ]
-build: [
-  "ocaml" "pkg/pkg.ml" "build"
-          "--pinned" "%{pinned}%" ]
+  "containers"
+]
+build: ["dune" "build" "-p" name "-j" jobs]
 available: [ ocaml-version >= "4.03.0" ]

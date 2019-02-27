@@ -1,5 +1,0 @@
-description = "Automatic loader for requires for OCaml Toplevels"
-requires = "findlib angstrom containers"
-version = "%%VERSION%%"
-archive(byte, toploop) = "nosetup.cma"
-archive(native, toploop) = "nosetup.cmxa"

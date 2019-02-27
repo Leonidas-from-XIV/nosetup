@@ -19,17 +19,14 @@ You can call it `no-setup` or `nose-tup`. In the latter case you can use
 
 Be sure to have installed:
 
-  * `ocamlbuild` (for building)
-  * `topkg` (also for building)
-  * `findlib`
-  * `angstrom`
-  * `containers`
+```sh
+opam switch create . --deps-only ocaml-base-compiler.4.07.1
+```
 
-The package uses `topkg` to run the build infrastructure, therefore you can
-build it with a short incantation:
+then building the source can be done with a simple incantation:
 
 ```sh
-ocaml pkg/pkg.ml build
+make
 ```
 
 ## Usage
